@@ -36,11 +36,11 @@
             this.lblDeskDepth = new System.Windows.Forms.Label();
             this.deskDepth = new System.Windows.Forms.TextBox();
             this.lblNumDrawers = new System.Windows.Forms.Label();
-            this.numDrawers = new System.Windows.Forms.ComboBox();
+            this.cmbNumDrawers = new System.Windows.Forms.ComboBox();
             this.lblSurfaceMaterial = new System.Windows.Forms.Label();
             this.cmbSurfaceMaterial = new System.Windows.Forms.ComboBox();
             this.lblRushOrderDays = new System.Windows.Forms.Label();
-            this.rushOrder = new System.Windows.Forms.ComboBox();
+            this.cmbRushOrder = new System.Windows.Forms.ComboBox();
             this.btnSubmitQuote = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -80,6 +80,7 @@
             this.deskWidth.Name = "deskWidth";
             this.deskWidth.Size = new System.Drawing.Size(100, 20);
             this.deskWidth.TabIndex = 3;
+            this.deskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.deskWidth_Validating);
             // 
             // lblDeskDepth
             // 
@@ -106,18 +107,18 @@
             this.lblNumDrawers.TabIndex = 6;
             this.lblNumDrawers.Text = "Number Drawers";
             // 
-            // numDrawers
+            // cmbNumDrawers
             // 
-            this.numDrawers.FormattingEnabled = true;
-            this.numDrawers.Items.AddRange(new object[] {
+            this.cmbNumDrawers.FormattingEnabled = true;
+            this.cmbNumDrawers.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.numDrawers.Location = new System.Drawing.Point(139, 150);
-            this.numDrawers.Name = "numDrawers";
-            this.numDrawers.Size = new System.Drawing.Size(100, 21);
-            this.numDrawers.TabIndex = 7;
+            this.cmbNumDrawers.Location = new System.Drawing.Point(139, 150);
+            this.cmbNumDrawers.Name = "cmbNumDrawers";
+            this.cmbNumDrawers.Size = new System.Drawing.Size(100, 21);
+            this.cmbNumDrawers.TabIndex = 7;
             // 
             // lblSurfaceMaterial
             // 
@@ -146,13 +147,18 @@
             this.lblRushOrderDays.TabIndex = 10;
             this.lblRushOrderDays.Text = "Rush Order Days";
             // 
-            // rushOrder
+            // cmbRushOrder
             // 
-            this.rushOrder.FormattingEnabled = true;
-            this.rushOrder.Location = new System.Drawing.Point(139, 228);
-            this.rushOrder.Name = "rushOrder";
-            this.rushOrder.Size = new System.Drawing.Size(100, 21);
-            this.rushOrder.TabIndex = 11;
+            this.cmbRushOrder.FormattingEnabled = true;
+            this.cmbRushOrder.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbRushOrder.Location = new System.Drawing.Point(139, 228);
+            this.cmbRushOrder.Name = "cmbRushOrder";
+            this.cmbRushOrder.Size = new System.Drawing.Size(100, 21);
+            this.cmbRushOrder.TabIndex = 11;
             // 
             // btnSubmitQuote
             // 
@@ -189,11 +195,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.btnSubmitQuote);
-            this.Controls.Add(this.rushOrder);
+            this.Controls.Add(this.cmbRushOrder);
             this.Controls.Add(this.lblRushOrderDays);
             this.Controls.Add(this.cmbSurfaceMaterial);
             this.Controls.Add(this.lblSurfaceMaterial);
-            this.Controls.Add(this.numDrawers);
+            this.Controls.Add(this.cmbNumDrawers);
             this.Controls.Add(this.lblNumDrawers);
             this.Controls.Add(this.deskDepth);
             this.Controls.Add(this.lblDeskDepth);
@@ -219,11 +225,11 @@
         private System.Windows.Forms.Label lblDeskDepth;
         private System.Windows.Forms.TextBox deskDepth;
         private System.Windows.Forms.Label lblNumDrawers;
-        private System.Windows.Forms.ComboBox numDrawers;
+        private System.Windows.Forms.ComboBox cmbNumDrawers;
         private System.Windows.Forms.Label lblSurfaceMaterial;
         private System.Windows.Forms.ComboBox cmbSurfaceMaterial;
         private System.Windows.Forms.Label lblRushOrderDays;
-        private System.Windows.Forms.ComboBox rushOrder;
+        private System.Windows.Forms.ComboBox cmbRushOrder;
         private System.Windows.Forms.Button btnSubmitQuote;
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.BindingSource deskBindingSource;

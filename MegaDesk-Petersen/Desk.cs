@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Petersen
 {
-    class Desk
+    public class Desk
     {
         public int deskWidth { get; set; }
         public int deskDepth { get; set; }
         public int numDrawers { get; set; }
         public string surfaceMaterial { get; set; }
+
+        public Desk() { }
 
         public Desk(int deskWidth, int deskDepth, int numDrawers, string surfaceMaterial)
         {

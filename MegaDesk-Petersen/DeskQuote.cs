@@ -8,11 +8,10 @@ namespace MegaDesk_Petersen
 {
     class DeskQuote
     {
-        Desk desk { get; set; }
-        string customerFullName { get; set; }
-        int rushOrderDays { get; set; }
-        DateTime quoteDate = DateTime.Now;
-
+        public Desk desk { get; set; }
+        public string customerFullName { get; set; }
+        public int rushOrderDays { get; set; }
+        public DateTime quoteDate = DateTime.Now;
 
     }
 }
