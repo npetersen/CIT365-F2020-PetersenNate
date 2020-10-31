@@ -5,18 +5,18 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>My Scripture Journal Entries</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-primary">Add New Journal Entry</a>
 </p>
 <form>
     <p>
-        <select asp-for="JournalEntryBook" asp-items="Model.Books">
+        <select asp-for="JournalEntryBook" asp-items="Model.Books" class="form-control">
             <option value="">All</option>
         </select>
-        Title: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
+        Title: <input type="text" asp-for="SearchString" class="form-control" />
+        <button type="submit" class="btn btn-primary">Submit</button>
     </p>
 </form>
 <table class="table">
