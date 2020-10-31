@@ -16,6 +16,14 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.container-bg-f5f5f5 {
+    background-color: #f5f5f5;
+}
+
+.table {
+    background-color: white !important;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;

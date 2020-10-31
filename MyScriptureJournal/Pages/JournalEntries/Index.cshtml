@@ -5,21 +5,20 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>My Scripture Journal Entries</h1>
+<h1 class="mb-4">My Scripture Journal Entries</h1>
 
-<p>
-    <a asp-page="Create" class="btn btn-primary">Add New Journal Entry</a>
-</p>
-<form>
-    <p>
-        <select asp-for="JournalEntryBook" asp-items="Model.Books" class="form-control">
-            <option value="">All</option>
-        </select>
-        Title: <input type="text" asp-for="SearchString" class="form-control" />
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </p>
+<p class="mb-4"><a asp-page="Create" class="btn btn-primary">Add New Journal Entry</a></p>
+
+<form class="form-inline">
+    <label class="my-1 mr-2">Search Journal Entries:</label>
+    <select asp-for="JournalEntryBook" asp-items="Model.Books" class="form-control mr-2">
+        <option value="">All scripture books</option>
+    </select>
+    <input type="text" asp-for="SearchString" class="form-control mr-2" placeholder="Journal entry keywords" />
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<table class="table">
+
+<table class="table table-hover mt-5">
     <thead>
         <tr>
             <th>
@@ -51,7 +50,7 @@
 @foreach (var item in Model.JournalEntry) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                <a asp-page="./Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Title)</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EntryDate)

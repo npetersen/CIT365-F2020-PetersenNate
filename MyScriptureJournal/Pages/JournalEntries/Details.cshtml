@@ -2,13 +2,12 @@
 @model MyScriptureJournal.Pages.JournalEntries.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @Html.DisplayFor(model => model.JournalEntry.Title);
 }
 
-<h1>Details</h1>
+<h1>@Html.DisplayFor(model => model.JournalEntry.Title)</h1>
 
 <div>
-    <h4>JournalEntry</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">

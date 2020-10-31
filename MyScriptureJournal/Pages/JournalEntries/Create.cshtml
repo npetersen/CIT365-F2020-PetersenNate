@@ -6,8 +6,6 @@
 }
 
 <h1>Add New Journal Entry</h1>
-
-<h4>Journal Entry</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -44,14 +42,14 @@
                 <span asp-validation-for="JournalEntry.Notes" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Add Journal Entry" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Back to Journal Entry List</a>
 </div>
 
 @section Scripts {
