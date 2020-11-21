@@ -15,6 +15,28 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.jumbotron {
+    background: url(../img/bg-university.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.jumbotron-h1 {
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.container-bg-e6ffff {
+    background-color: #e6ffff;
+}
+
+.table {
+    background-color: white !important;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
